@@ -1,0 +1,13 @@
+    int kthSmallest(int arr[], int l, int r, int k) {
+        priority_queue<int,vector<int>,greater<int>> mini;
+        for(int i=l;i<=r;i++)
+        {
+            mini.push(arr[i]);
+        }
+        while(k!=1)
+        {
+            mini.pop();
+            k--;
+        }
+        return mini.top();
+    }
