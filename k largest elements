@@ -1,0 +1,15 @@
+	vector<int> kLargest(int arr[], int n, int k) {
+	    priority_queue<int> maxi;
+	    vector<int> m;
+	    for(int i=0;i<n;i++)
+	    {
+	        maxi.push(arr[i]);
+	    }
+	    while(k!=0)
+	    {
+	        m.push_back(maxi.top());
+	        maxi.pop();
+	        k--;
+	    }
+	    return m;
+	}
